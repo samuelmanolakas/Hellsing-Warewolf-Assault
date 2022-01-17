@@ -1,5 +1,10 @@
 extends KinematicBody2D
 
+
+export (PackedScene) var Bullet
+
+onready var end_of_gun = $EndOfGun
+
 const MOVE_SPEED = 300
  
 onready var raycast = $RayCast2D
@@ -24,10 +29,14 @@ func _physics_process(delta):
 	var look_vec = get_global_mouse_position() - global_position
 	global_rotation = atan2(look_vec.y, look_vec.x)
  
-	if Input.is_action_just_pressed("shoot"):
-		var coll = raycast.get_collider()
-		if raycast.is_colliding() and coll.has_method("kill"):
-			coll.kill()
- 
-func kill():
-	get_tree().reload_current_scene()
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_released("shoot"):
+		shoot()
+
+func shoot():
+	var bullet_instance = Bullet.instance()
+	bullet_instance.global_position = end_of_gun.global_postion
+	var target = get_global_mouse_position()
+	var direction_to_mouse = bullet_instance.global_postion.direction_to(target).nomalized
+	bullet_instance.set_direction(	direction_to_mouse)
+	emit_signal("player_fired_bullet", bullet_instance)
