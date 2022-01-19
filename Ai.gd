@@ -11,7 +11,22 @@ onready var player_detection_zone = $PlayerDetectionZone
 
 var current_state: int = State.PATROl setget set_state
 onready var player = get_node("res://Player.tscn")
+var actor = null
 
+func _process(delta):
+	match current_state:
+		State.PATROl:
+			pass
+		State.ENGAGE:
+			if player != null:
+				actor.rotation = actor.global_position.direction_to(player.global_position).angle()
+			else:
+				print("In the engage state but no player")
+		_:
+			print("Error: found a state for our enemy that should not exist")
+
+func initialize(actor):
+	self.actor = actor
 
 func set_state(new_state: int):
 	if new_state == current_state:
