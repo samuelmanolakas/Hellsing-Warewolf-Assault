@@ -25,6 +25,7 @@ func _physics_process(delta):
  
 	var look_vec = get_global_mouse_position() - global_position
 	global_rotation = atan2(look_vec.y, look_vec.x)
+	print (health)
  
 	if Input.is_action_just_pressed("shoot"):
 		var coll = raycast.get_collider()
