@@ -30,3 +30,6 @@ cast_to = Vector2( 2000, 0 )
 
 [node name="Weapon" type="Node2D" parent="."]
 script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true

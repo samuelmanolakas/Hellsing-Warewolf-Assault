@@ -14,7 +14,7 @@ func _physics_process(delta):
 	velocity = Vector2.ZERO
 	velocity = global_position.direction_to(player.global_position) * run_speed
 	velocity = move_and_slide(velocity)
-
+	#_on_PlayerDetector_body_entered(player)
 
 func handle_hit():
 	health_stat.health -= 20
@@ -22,22 +22,8 @@ func handle_hit():
 		queue_free()
 
 
-func hit():
-	$AttackDetector.monitoring = true
-
-func end_of_hit():
-	$AttackDetector.monitoring = false
-
-
-
 func _on_PlayerDetector_body_entered(body):
-	print("colliding with player")
-	if body.name == "player":
-		body.health -= 20
-		body.position += Vector2(100,0)
-	pass # Replace with function body.
-
-
-func _on_AttackDetector_body_entered(body):
-	print("attacking")
-	pass # Replace with function body.
+	if body.name == "Player":
+		body.get_node("Health").health -= 20
+		player.position += Vector2(100,0)
+		#print("colliding with player")
