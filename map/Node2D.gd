@@ -14,7 +14,7 @@ func _ready():
 
 
 func _on_enemy_spawn_timeout():
-	var stave_postition = Vector2(rand_range( 0, 600), rand_range( 0, 600))
+	var stave_postition = Vector2(rand_range( 0, 1024), rand_range( 0, 600))
 	var GrabedInstance= stave.instance()
 	self.add_child(GrabedInstance)
 	GrabedInstance.global_position = stave_postition
