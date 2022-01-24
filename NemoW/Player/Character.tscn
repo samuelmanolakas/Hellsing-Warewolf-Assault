@@ -157,6 +157,7 @@ tracks/11/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "Weapon_down"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Torso/Weapon:position")
 tracks/0/interp = 1
@@ -164,10 +165,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -8.31078, -109.219 ), Vector2( -4.51376, -53.1765 ), Vector2( -6.69415, -48.0524 ) ]
+"values": [ Vector2( -8.31078, -109.219 ), Vector2( -4.51376, -53.1765 ), Vector2( 6.20923, -45.6163 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Torso/Weapon:rotation_degrees")
@@ -176,10 +177,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ -20.613, -59.6993, -61.1021 ]
+"values": [ -20.613, -59.6993, -57.1672 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Torso/Left Arm:position")
@@ -188,7 +189,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.7, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -35.327, -19.7232 ), Vector2( -35.327, -19.7232 ), Vector2( -35.327, -19.7232 ), Vector2( -35.327, -19.7232 ), Vector2( -35.327, -19.7232 ) ]
@@ -200,7 +201,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ -21.7069, -34.2503, -32.9243, -19.6748, -23.4858 ]
@@ -212,7 +213,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 25.0059, -49.5882 ), Vector2( 25.0059, -49.5882 ), Vector2( 25.0059, -49.5882 ), Vector2( 25.0059, -49.5882 ), Vector2( 25.0059, -49.5882 ) ]
@@ -224,7 +225,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 4.13368, 49.9329, 84.414, 100.515, 104.555 ]
@@ -236,7 +237,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.8, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.7, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 17.5543, -50.5751 ), Vector2( 17.965, -47.3287 ), Vector2( 18.2388, -45.1644 ), Vector2( 19.2596, -46.1451 ), Vector2( 18.9232, -39.7537 ) ]
@@ -248,7 +249,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.8, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.7, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ -21.7241, -69.8556, -83.2673, -89.7504, -80.0695 ]
@@ -260,7 +261,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.8, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.7, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 38.5349, 5.66224 ), Vector2( 38.5349, 5.66224 ), Vector2( 38.5349, 5.66224 ), Vector2( 38.5349, 5.66224 ), Vector2( 38.5349, 5.66224 ) ]
@@ -272,7 +273,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.8, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.7, 1.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ -7.18047, 21.4834, 44.0073, 53.6717, 60.1145 ]
@@ -296,7 +297,7 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 1.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 20.8384, -24.4049 ]

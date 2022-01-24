@@ -12,6 +12,7 @@ export (int) var speed = 100
 onready var end_of_gun = $EndOfGun
 onready var gun_direction = $GunDirection
 onready var health_stat = $Health
+onready var animation_player = $AnimationPlayer
 
 
 
@@ -48,6 +49,7 @@ func shoot():
 	var bullet_instance = Bullet.instance()
 	var direction = (gun_direction.global_position - end_of_gun.global_position).normalized()
 	emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
+	animation_player.play("Idle")
 
 
 
