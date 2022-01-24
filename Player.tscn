@@ -29,3 +29,6 @@ position = Vector2( 29.6082, 12.5992 )
 position = Vector2( 32.036, 12.599 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
