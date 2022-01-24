@@ -9,8 +9,11 @@ onready var player = get_node("../Player")
 
 func _ready():
 	ai.initialize(self)
+	
 
 func _physics_process(delta):
+	if player == null:
+		set_physics_process(false)
 	velocity = Vector2.ZERO
 	velocity = global_position.direction_to(player.global_position) * run_speed
 	velocity = move_and_slide(velocity)

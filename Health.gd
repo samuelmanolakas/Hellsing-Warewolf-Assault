@@ -8,3 +8,6 @@ func set_health(new_health: int):
 
 func _process(delta):
 	print (health)
+	if health <= 0:
+		get_parent().queue_free()
+		#get_node("../Enemy").set_physics_process(false)
