@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/survivor-idle_shotgun_0.png-5bc243c0b74817565dafb6c4fffc4058.stex"
+path="res://.import/L_Forearm.png-1b8ebc70161cfbd33fa50377d7288c9b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NemoW/survivor-idle_shotgun_0.png"
-dest_files=[ "res://.import/survivor-idle_shotgun_0.png-5bc243c0b74817565dafb6c4fffc4058.stex" ]
+source_file="res://NemoW/Player/L_Forearm.png"
+dest_files=[ "res://.import/L_Forearm.png-1b8ebc70161cfbd33fa50377d7288c9b.stex" ]
 
 [params]
 
