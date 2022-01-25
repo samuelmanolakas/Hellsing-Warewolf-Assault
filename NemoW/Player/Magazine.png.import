@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Magazine.png-74bac2c33a66b23f4288357bce7fa546.stex"
+path="res://.import/Magazine.png-51911e7e215fbaeae5dcdcfa3868ee6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Magazine.png"
-dest_files=[ "res://.import/Magazine.png-74bac2c33a66b23f4288357bce7fa546.stex" ]
+source_file="res://NemoW/Player/Magazine.png"
+dest_files=[ "res://.import/Magazine.png-51911e7e215fbaeae5dcdcfa3868ee6f.stex" ]
 
 [params]
 
