@@ -9,6 +9,4 @@ func set_health(new_health: int):
 func _process(delta):
 	print (health)
 	if health <= 0:
-		print("Player is dead!")
-		get_tree().change_scene("res://Death.tscn")
-		#get_node("../Enemy").set_physics_process(false)
+		print("Enemy is dead!")
