@@ -3,7 +3,7 @@ extends KinematicBody2D
 var run_speed = 140
 var velocity = Vector2.ZERO
 
-onready var health_stat = $Health
+onready var health_stat = $Enemy_health
 onready var ai = $AI
 onready var player = get_node("../Player")
 
