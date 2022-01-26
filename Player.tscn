@@ -454,10 +454,10 @@ tracks/11/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.1861, 17.0204 )
+extents = Vector2( 32.1861, 16.5628 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 245.879, 93.9153 )
+position = Vector2( 238, 85 )
 script = ExtResource( 2 )
 Bullet = ExtResource( 3 )
 
@@ -505,7 +505,7 @@ anims/RESET = SubResource( 3 )
 anims/Weapon_down = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.0650482, 7.1051 )
+position = Vector2( -0.0650482, 7.56275 )
 shape = SubResource( 1 )
 
 [node name="EndOfGun" type="Position2D" parent="."]
