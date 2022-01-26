@@ -8,7 +8,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 19.4888
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 position = Vector2( 245.879, 93.9153 )
 script = ExtResource( 2 )
 Bullet = ExtResource( 3 )

@@ -60,7 +60,7 @@ position = Vector2( -1776.87, -956.403 )
 script = ExtResource( 3 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 73.8611, 226.077 )
+position = Vector2( 549.635, -861.407 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( -2.05676, -708.087 )

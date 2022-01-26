@@ -16,7 +16,7 @@ extents = Vector2( 45.15, 10.0403 )
 radius = 35.2418
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 1449.46
+radius = 22272.1
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 27.5109, 59.0671 )
@@ -51,7 +51,6 @@ health = 200
 script = ExtResource( 3 )
 
 [node name="PlayerDetectionZone" type="Area2D" parent="AI"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI/PlayerDetectionZone"]
 shape = SubResource( 4 )
