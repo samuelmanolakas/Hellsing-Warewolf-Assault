@@ -5,8 +5,8 @@
 [ext_resource path="res://Bullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Health.tscn" type="PackedScene" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 34.3721, 23.0408 )
+[sub_resource type="CircleShape2D" id=1]
+radius = 19.4888
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 245.879, 93.9153 )
@@ -19,7 +19,7 @@ scale = Vector2( 0.2, 0.315 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.471954, -0.15802 )
+position = Vector2( -8.00374, 4.47714 )
 shape = SubResource( 1 )
 
 [node name="EndOfGun" type="Position2D" parent="."]
