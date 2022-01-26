@@ -457,7 +457,7 @@ tracks/11/keys = {
 extents = Vector2( 32.1861, 16.5628 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 238, 85 )
+position = Vector2( 236, 83 )
 script = ExtResource( 2 )
 Bullet = ExtResource( 3 )
 

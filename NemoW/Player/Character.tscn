@@ -512,7 +512,7 @@ tracks/11/keys = {
 "values": [ 20.8384, -24.4049 ]
 }
 
-[node name="Character" type="Node2D"]
+[node name="Player" type="Node2D"]
 
 [node name="Torso" type="Sprite" parent="."]
 position = Vector2( 516, 268 )
@@ -544,7 +544,6 @@ texture = ExtResource( 2 )
 offset = Vector2( 15.9837, -14.879 )
 
 [node name="Magazine" type="Sprite" parent="Torso"]
-visible = false
 position = Vector2( 51.5538, -83.8224 )
 texture = ExtResource( 8 )
 
