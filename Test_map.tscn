@@ -1,19 +1,36 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://BulletManager.gd" type="Script" id=3]
 [ext_resource path="res://Test_map.gd" type="Script" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://NemoW/map_prototype.png" type="Texture" id=5]
 [ext_resource path="res://Bullet.tscn" type="PackedScene" id=6]
-[ext_resource path="res://NemoW/backgrounddetailed2.png" type="Texture" id=7]
 [ext_resource path="res://SpawnLocation.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 741.874, 81.9775 )
+extents = Vector2( 1485.23, 173.542 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 121.443, 382.121 )
+extents = Vector2( 168.876, 598.017 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 168.876, 460.295 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 845.259, 145.542 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 841.911, 175.678 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 210.039, 393.955 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 363.231, 734.839 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 217.521, 195.711 )
 
 [node name="Test_map" type="Node2D"]
 script = ExtResource( 4 )
@@ -24,30 +41,30 @@ autostart = true
 [node name="Position2D" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( 563.161, -699 )
+position = Vector2( -519.916, -780.543 )
 
 [node name="Position2D4" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( -1053.5, 301.097 )
+position = Vector2( -1060.84, 521.068 )
 
 [node name="Position2D3" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( 568.016, 1320.61 )
+position = Vector2( 764.66, 1341.79 )
 
 [node name="Position2D2" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( 2272.06, 286.532 )
+position = Vector2( 2247.86, 498.302 )
 
 [node name="SpawnLocation" parent="." instance=ExtResource( 8 )]
-position = Vector2( 568.016, -703.855 )
+position = Vector2( -522.315, -775.805 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 600.4, 311.132 )
-scale = Vector2( 6.14629, 3.67069 )
-texture = ExtResource( 7 )
+position = Vector2( 597.973, 311.132 )
+scale = Vector2( 1.64184, 1.79889 )
+texture = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 511.934, 102.85 )
@@ -60,157 +77,78 @@ position = Vector2( -1776.87, -956.403 )
 script = ExtResource( 3 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 73.8611, 226.077 )
+position = Vector2( -549.182, -928.473 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( -2.05676, -708.087 )
+position = Vector2( 1113.98, -798.048 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -283.936, 16.9514 )
 shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -4.23792, 2.11895 )
-scale = Vector2( 22.9839, 2.92028 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2( -2.05676, -708.087 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2( 1418.44, 2021.13 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D4/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -4.23792, 2.11895 )
-scale = Vector2( 22.9839, 2.92028 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2( -2.05676, -708.087 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2( -269.789, 2035.28 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D3/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -4.23792, 2.11895 )
-scale = Vector2( 22.9839, 2.92028 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2( -2.05676, -726.95 )
+position = Vector2( 2310.42, -294.662 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( 1411.68, 27.3386 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 2307.07, 1125.07 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D2/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -4.23792, 2.11895 )
-scale = Vector2( 22.9839, 2.92028 )
-texture = ExtResource( 5 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource( 3 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 1848.33, 1389.6 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource( 4 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2( 2244.68, -254.649 )
+position = Vector2( -271.223, 1429.78 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-shape = SubResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D5/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -1.75657, -5.27005 )
-scale = Vector2( 4.01931, 12.4734 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="."]
-position = Vector2( 2244.68, -254.649 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
-position = Vector2( -3291.58, 1131.18 )
-shape = SubResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D8/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -1.75657, -5.27005 )
-scale = Vector2( 4.01931, 12.4734 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="."]
-position = Vector2( 2244.68, -254.649 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
-position = Vector2( -3289.65, 29.8284 )
-shape = SubResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D7/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -1.75657, -5.27005 )
-scale = Vector2( 4.01931, 12.4734 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
+shape = SubResource( 5 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2( 2244.68, -254.649 )
+position = Vector2( -1151.86, 1145.16 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
-position = Vector2( 12.7837, 1129.22 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2( -1306.53, -422.559 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D6/CollisionShape2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -1.75657, -5.27005 )
-scale = Vector2( 4.01931, 12.4734 )
-texture = ExtResource( 5 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+shape = SubResource( 7 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+position = Vector2( -937.401, -820.834 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+shape = SubResource( 8 )
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
