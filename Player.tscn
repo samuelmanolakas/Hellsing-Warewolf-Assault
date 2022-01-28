@@ -18,7 +18,9 @@ font_data = ExtResource( 6 )
 size = 40
 font_data = ExtResource( 6 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 position = Vector2( 245.879, 93.9153 )
 script = ExtResource( 2 )
 Bullet = ExtResource( 3 )
