@@ -3,6 +3,7 @@ extends Node2D
 onready var bullet_manager = $BulletManager
 onready var player = $Player
 
+
 var enemy = preload("res://Enemy.tscn")
 
 func _ready() -> void:

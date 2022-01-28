@@ -22,6 +22,7 @@ func _physics_process(delta):
 func handle_hit():
 	health_stat.health -= 20
 	if health_stat.health <= 0:
+		Global.score += 1
 		queue_free()
 
 
