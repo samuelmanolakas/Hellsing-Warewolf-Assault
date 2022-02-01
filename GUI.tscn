@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Score1.gd" type="Script" id=1]
+[ext_resource path="res://Roboto-BoldItalic.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0745098, 0.478431, 0.0313726, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.392157, 0.0431373, 0.0431373, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 63.0
+margin_bottom = 16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="Control"]
+margin_left = 120.4
+margin_top = -0.00112915
+margin_right = 142.4
+margin_bottom = 47.9989
+custom_fonts/font = SubResource( 1 )
+text = "0"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score2" type="RichTextLabel" parent="Control"]
+margin_top = -0.334824
+margin_right = 133.0
+margin_bottom = 76.6652
+custom_fonts/normal_font = SubResource( 2 )
+text = "KILLS:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_right = 40
+custom_constants/margin_top = 40
+custom_constants/margin_left = 40
+custom_constants/margin_bottom = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 560.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopRow" type="HBoxContainer" parent="MarginContainer/Rows"]
+margin_right = 944.0
+margin_bottom = 85.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="MiddleRow" type="HBoxContainer" parent="MarginContainer/Rows"]
+margin_top = 89.0
+margin_right = 944.0
+margin_bottom = 430.0
+mouse_filter = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="BottomRow" type="HBoxContainer" parent="MarginContainer/Rows"]
+margin_top = 434.0
+margin_right = 944.0
+margin_bottom = 520.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/Rows/BottomRow"]
+margin_right = 250.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 250, 50 )
+mouse_filter = 2
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+value = 50.0
