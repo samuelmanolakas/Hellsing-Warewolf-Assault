@@ -24,6 +24,7 @@ func handle_hit():
 	if health_stat.health <= 0:
 		Global.score += 1
 		queue_free()
+		Global._wave_counter()
 
 
 func _on_PlayerDetector_body_entered(body):
