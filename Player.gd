@@ -12,10 +12,11 @@ export (int) var speed = 200
 onready var end_of_gun = $EndOfGun
 onready var gun_direction = $GunDirection
 onready var health_stat = $Health
-
+onready var gui = $GUI
 
 
 func _ready():
+	gui.set_new_health_value(self.health_stat.health)
 	pass # Replace with function body.
 
 
