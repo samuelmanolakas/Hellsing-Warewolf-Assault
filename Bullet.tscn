@@ -4,9 +4,10 @@
 [ext_resource path="res://Bullet.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2.11523, 5.57913 )
+extents = Vector2( 1.94088, 5.76812 )
 
 [node name="Bullet" type="Area2D"]
+scale = Vector2( 1.3, 1.3 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -14,6 +15,8 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.937255, 0, 1 )
+self_modulate = Color( 1, 0.937255, 0, 1 )
 rotation = 1.5708
 scale = Vector2( 0.09, 0.09 )
 texture = ExtResource( 1 )

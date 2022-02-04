@@ -1,15 +1,39 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Credits.gd" type="Script" id=1]
+[ext_resource path="res://NemoW/sr-logo-monogram-emblem-style-with-crown-shape-design-template-free-vector.webp" type="Texture" id=2]
+[ext_resource path="res://Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
 
 [node name="Credits" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 797.567, 454.802 )
+scale = Vector2( 7.99042, 4.61291 )
+texture = ExtResource( 2 )
+
 [node name="Programmers" type="Label" parent="."]
-margin_left = 338.473
-margin_top = 15.4935
-margin_right = 576.473
-margin_bottom = 98.4935
+margin_left = 603.285
+margin_top = 52.5366
+margin_right = 1003.28
+margin_bottom = 202.537
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Programmers :
 Samuel Manolakas
 Rasmus Andersson"
@@ -21,10 +45,12 @@ __meta__ = {
 }
 
 [node name="Graphics" type="Label" parent="."]
-margin_left = 338.473
-margin_top = 141.825
-margin_right = 576.473
-margin_bottom = 224.825
+margin_left = 668.388
+margin_top = 298.001
+margin_right = 923.388
+margin_bottom = 397.001
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Graphics:
 Nemo Wasen"
 align = 1
@@ -35,10 +61,12 @@ __meta__ = {
 }
 
 [node name="Map" type="Label" parent="."]
-margin_left = 342.049
-margin_top = 300.335
-margin_right = 580.049
-margin_bottom = 383.335
+margin_left = 674.0
+margin_top = 457.847
+margin_right = 912.0
+margin_bottom = 540.847
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Map:
 Sven"
 align = 1
@@ -49,10 +77,12 @@ __meta__ = {
 }
 
 [node name="ReturnButton" type="Button" parent="."]
-margin_left = 390.913
-margin_top = 452.887
-margin_right = 533.913
-margin_bottom = 492.887
+margin_left = 651.53
+margin_top = 632.607
+margin_right = 794.53
+margin_bottom = 672.607
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Return to Menu"
 __meta__ = {
 "_edit_use_anchors_": false
