@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Score1.gd" type="Script" id=1]
 [ext_resource path="res://Roboto-BoldItalic.ttf" type="DynamicFontData" id=2]
@@ -28,6 +28,18 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 2 )
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -64,6 +76,8 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 0.667419
+margin_right = 0.66748
 mouse_filter = 2
 custom_constants/margin_right = 40
 custom_constants/margin_top = 40
@@ -114,6 +128,8 @@ custom_styles/bg = SubResource( 4 )
 value = 50.0
 
 [node name="Control2" type="Control" parent="."]
+margin_left = 1.0
+margin_top = 1.0
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -121,29 +137,36 @@ __meta__ = {
 }
 
 [node name="Wave_counter" type="RichTextLabel" parent="Control2"]
-margin_left = 859.867
-margin_top = -1.05255
-margin_right = 1022.87
-margin_bottom = 55.9474
-text = "Wave"
+margin_left = 925.0
+margin_right = 985.0
+margin_bottom = 29.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 7 )
+text = "Wave:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="next_wave" type="Label" parent="Control2"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 981.989
+margin_top = 0.665154
+margin_right = 1010.99
+margin_bottom = 31.6652
+custom_fonts/font = SubResource( 5 )
+text = "0"
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Next_wave_text" type="RichTextLabel" parent="Control2"]
-margin_left = 302.564
-margin_top = 103.529
-margin_right = 692.564
-margin_bottom = 198.529
-text = "Next wave"
+margin_left = 405.091
+margin_top = 82.1821
+margin_right = 639.091
+margin_bottom = 177.182
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 6 )
+text = "NEXT WAVE"
 __meta__ = {
 "_edit_use_anchors_": false
 }

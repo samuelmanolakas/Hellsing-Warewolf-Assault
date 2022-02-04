@@ -12,7 +12,7 @@ func _ready() -> void:
 
 
 func _process(delta):
-	if Global.wave_count == 5:
+	if Global.wave_count == 10:
 		wave_check()
 
 func wave_check():
