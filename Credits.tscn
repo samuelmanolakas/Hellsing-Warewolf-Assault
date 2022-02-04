@@ -34,12 +34,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Usless" type="Label" parent="."]
+[node name="Map" type="Label" parent="."]
 margin_left = 342.049
 margin_top = 300.335
 margin_right = 580.049
 margin_bottom = 383.335
-text = "Did absolutely jack shit:
+text = "Map:
 Sven"
 align = 1
 valign = 1
