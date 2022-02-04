@@ -38,28 +38,28 @@ script = ExtResource( 4 )
 [node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
 
-[node name="Position2D" type="Position2D" parent="." groups=[
+[node name="Spawn(top)" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( -519.916, -780.543 )
+position = Vector2( -551.916, -688.543 )
 
-[node name="Position2D4" type="Position2D" parent="." groups=[
+[node name="Spawn(left)" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( -1060.84, 521.068 )
+position = Vector2( -1001.76, 558.191 )
 
-[node name="Position2D3" type="Position2D" parent="." groups=[
+[node name="Spawn(bottom)" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( 764.66, 1341.79 )
+position = Vector2( 771.787, 1304.37 )
 
-[node name="Position2D2" type="Position2D" parent="." groups=[
+[node name="Spawn(right)" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( 2247.86, 498.302 )
+position = Vector2( 2196.72, 499.491 )
 
 [node name="SpawnLocation" parent="." instance=ExtResource( 8 )]
-position = Vector2( -522.315, -775.805 )
+position = Vector2( -551.315, -697.805 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 597.973, 311.132 )

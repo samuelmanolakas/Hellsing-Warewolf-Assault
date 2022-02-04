@@ -29,16 +29,16 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=7]
-size = 20
-font_data = ExtResource( 2 )
-
 [sub_resource type="DynamicFont" id=5]
-size = 20
+size = 40
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
 font_data = ExtResource( 2 )
 
 [node name="GUI" type="CanvasLayer"]
@@ -137,22 +137,23 @@ __meta__ = {
 }
 
 [node name="Wave_counter" type="RichTextLabel" parent="Control2"]
-margin_left = 925.0
-margin_right = 985.0
-margin_bottom = 29.0
+margin_left = 1364.3
+margin_top = -1.58739
+margin_right = 1494.3
+margin_bottom = 51.4126
 mouse_filter = 2
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 5 )
 text = "Wave:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="next_wave" type="Label" parent="Control2"]
-margin_left = 981.989
-margin_top = 0.665154
-margin_right = 1010.99
-margin_bottom = 31.6652
-custom_fonts/font = SubResource( 5 )
+margin_left = 1480.43
+margin_top = -1.71595
+margin_right = 1509.43
+margin_bottom = 46.284
+custom_fonts/font = SubResource( 6 )
 text = "0"
 script = ExtResource( 4 )
 __meta__ = {
@@ -160,12 +161,12 @@ __meta__ = {
 }
 
 [node name="Next_wave_text" type="RichTextLabel" parent="Control2"]
-margin_left = 405.091
-margin_top = 82.1821
-margin_right = 639.091
-margin_bottom = 177.182
+margin_left = 600.0
+margin_top = 200.0
+margin_right = 963.0
+margin_bottom = 296.0
 mouse_filter = 2
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 7 )
 text = "NEXT WAVE"
 __meta__ = {
 "_edit_use_anchors_": false

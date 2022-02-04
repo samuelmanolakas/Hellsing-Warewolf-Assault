@@ -18,7 +18,7 @@ func _process(delta):
 func wave_check():
 	timer.stop()
 	print("stop")
-	timer.set_wait_time(2)
+	timer.set_wait_time(1)
 	next_wave.visible = true
 	timer.start()
 
@@ -32,4 +32,4 @@ func _on_SpawnTimer_timeout():
 	var nodes = get_tree().get_nodes_in_group("spawn")
 	var node = nodes[randi() % nodes.size()]
 	var position = node.position
-	$SpawnLocation.position = position 
+	$SpawnLocation.position = position
