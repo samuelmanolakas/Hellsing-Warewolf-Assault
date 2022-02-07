@@ -3,7 +3,6 @@
 [resource]
 resource_name = "Idle"
 length = 0.2
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Torso/Weapon:rotation_degrees")
 tracks/0/interp = 1
@@ -63,16 +62,4 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ -7.18047, 1.07631, -7.18047 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Torso:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 20.8384 ]
 }

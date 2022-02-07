@@ -290,25 +290,25 @@ texture = ExtResource( 7 )
 
 [node name="Right Arm" type="Sprite" parent="."]
 position = Vector2( 38.5349, 5.66224 )
-rotation = -0.0211205
+rotation = -0.125323
 texture = ExtResource( 6 )
 offset = Vector2( 11.6393, -23.7166 )
 
 [node name="Right Forearm" type="Sprite" parent="Right Arm"]
 position = Vector2( 17.5543, -50.5751 )
-rotation = -0.645108
+rotation = -0.379157
 texture = ExtResource( 3 )
 offset = Vector2( -10.7867, -17.6408 )
 
 [node name="Left Arm" type="Sprite" parent="."]
 position = Vector2( -35.327, -19.7232 )
-rotation = -0.46469
+rotation = -0.378857
 texture = ExtResource( 4 )
 offset = Vector2( 10.8636, -24.1507 )
 
 [node name="Left Forearm" type="Sprite" parent="Left Arm"]
 position = Vector2( 25.0059, -49.5882 )
-rotation = 0.330342
+rotation = 0.0721463
 texture = ExtResource( 5 )
 offset = Vector2( 15.9837, -14.879 )
 

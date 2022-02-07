@@ -13,6 +13,7 @@ onready var end_of_gun = $EndOfGun
 onready var gun_direction = $GunDirection
 onready var health_stat = $Health
 onready var gui = $GUI
+onready var player_animation = $Torso/AnimationPlayer
 
 
 func _ready():
@@ -38,17 +39,24 @@ func _physics_process(delta: float) -> void:
 	move_and_slide(movement_direction * speed)
 
 	look_at(get_global_mouse_position())
+	_input(self)
 
+func _input(event):
+	if Input.is_action_pressed("shoot"):
+		player_animation.play("Idle")
+	else:
+		player_animation.stop()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("shoot"):
 		shoot()
-
+	
 
 func shoot():
 	var bullet_instance = Bullet.instance()
 	var direction = (gun_direction.global_position - end_of_gun.global_position).normalized()
 	emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
+
 
 
 
