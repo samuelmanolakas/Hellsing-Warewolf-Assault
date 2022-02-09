@@ -7,7 +7,7 @@ func _ready():
 
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Test_map.tscn")
+	get_tree().change_scene("res://Test_map_sven.tscn")
 	pass 
 
 
