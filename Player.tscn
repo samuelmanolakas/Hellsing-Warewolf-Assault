@@ -14,9 +14,7 @@ extents = Vector2( 23.7744, 3.90264 )
 
 [sub_resource type="CircleShape2D" id=3]
 
-[node name="Player" type="KinematicBody2D" groups=[
-"player",
-]]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( 245.879, 93.9153 )
 script = ExtResource( 2 )
 Bullet = ExtResource( 3 )

@@ -19,4 +19,3 @@ func _on_enemy_spawn_timeout():
 	self.add_child(GrabedInstance)
 	GrabedInstance.global_position = stave_postition
 	print(GrabedInstance.global_position)
-	
