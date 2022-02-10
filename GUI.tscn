@@ -64,9 +64,8 @@ __meta__ = {
 }
 
 [node name="Score2" type="RichTextLabel" parent="Control"]
-margin_top = -0.334824
-margin_right = 133.0
-margin_bottom = 76.6652
+margin_right = 116.0
+margin_bottom = 165.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "KILLS:"
 __meta__ = {
@@ -90,31 +89,31 @@ __meta__ = {
 [node name="Rows" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 40.0
 margin_top = 40.0
-margin_right = 984.0
-margin_bottom = 560.0
+margin_right = 920.0
+margin_bottom = 500.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TopRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_right = 944.0
-margin_bottom = 85.0
+margin_right = 880.0
+margin_bottom = 75.0
 mouse_filter = 2
 size_flags_vertical = 3
 
 [node name="MiddleRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_top = 89.0
-margin_right = 944.0
-margin_bottom = 430.0
+margin_top = 79.0
+margin_right = 880.0
+margin_bottom = 380.0
 mouse_filter = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
 [node name="BottomRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_top = 434.0
-margin_right = 944.0
-margin_bottom = 520.0
+margin_top = 384.0
+margin_right = 880.0
+margin_bottom = 460.0
 mouse_filter = 2
 size_flags_vertical = 3
 

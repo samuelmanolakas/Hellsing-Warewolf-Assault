@@ -29,9 +29,10 @@ func handle_hit():
 
 func _on_PlayerDetector_body_entered(body):
 	if body.name == "Player":
+		$AudioStreamPlayer.play()
 		body.get_node("Health").health -= 20
 		if player.position.x > position.x:
-			player.position += Vector2(80,0)
+			player.position += Vector2(20,0)
 		if player.position.x < position.x:
 			player.position += Vector2(-100,0)
 		if player.position.y > position.y:

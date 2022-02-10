@@ -18,6 +18,7 @@ onready var player_animation = $Torso/AnimationPlayer
 
 func _ready():
 	gui.set_new_health_value(self.health_stat.health)
+	$AudioStreamPlayer2
 	pass # Replace with function body.
 
 
@@ -56,7 +57,7 @@ func shoot():
 	var bullet_instance = Bullet.instance()
 	var direction = (gun_direction.global_position - end_of_gun.global_position).normalized()
 	emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
-
+	$AudioStreamPlayer.play()
 
 
 
