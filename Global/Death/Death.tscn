@@ -4,7 +4,7 @@
 [ext_resource path="res://General/Sprite_fade/Sprite.gd" type="Script" id=2]
 [ext_resource path="res://NemoW/Dark Souls - You Died Sound Effect.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Global/Death/Death.gd" type="Script" id=4]
-[ext_resource path="res://Roboto-BoldItalic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://General/Roboto-BoldItalic.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30

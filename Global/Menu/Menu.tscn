@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Global/Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://NemoW/1256611.jpg" type="Texture" id=2]
-[ext_resource path="res://Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://General/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
