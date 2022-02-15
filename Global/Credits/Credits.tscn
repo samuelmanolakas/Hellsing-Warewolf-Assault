@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Credits.gd" type="Script" id=1]
+[ext_resource path="res://Global/Credits/Credits.gd" type="Script" id=1]
 [ext_resource path="res://NemoW/sr-logo-monogram-emblem-style-with-crown-shape-design-template-free-vector.webp" type="Texture" id=2]
 [ext_resource path="res://Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
 

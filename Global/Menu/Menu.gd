@@ -7,12 +7,12 @@ func _ready():
 
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Test_map_sven.tscn")
+	get_tree().change_scene("res://Maps/City_square.tscn")
 	pass 
 
 
 func _on_CreditsButton_pressed():
-	get_tree().change_scene("res://Credits.tscn")
+	get_tree().change_scene("res://Global/Credits/Credits.tscn")
 	pass # Replace with function body.
 
 
