@@ -5,7 +5,7 @@ onready var player = $Player
 onready var timer = get_node("SpawnTimer")
 onready var next_wave = get_node("Player/GUI/Control2/Next_wave_text")
 
-var enemy = preload("res://Enemy.tscn")
+var enemy = preload("res://Actors/Enemies/Enemy.tscn")
 
 func _ready() -> void:
 	player.connect("player_fired_bullet", bullet_manager,"handle_bullet_spawned")
