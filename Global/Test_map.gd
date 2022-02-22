@@ -6,6 +6,8 @@ onready var timer = get_node("SpawnTimer")
 onready var next_wave = get_node("Player/GUI/Control2/Next_wave_text")
 
 var enemy = preload("res://Actors/Enemies/Enemy.tscn")
+var fast_enemy = preload("res://Actors/Enemies/Fast_enemy/FastEnemy.tscn")
+var big_enemy = preload("res://Actors/Enemies/Big_enemy/BigEnemy.tscn")
 
 func _ready() -> void:
 	player.connect("player_fired_bullet", bullet_manager,"handle_bullet_spawned")
