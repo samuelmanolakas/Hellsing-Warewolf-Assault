@@ -36,3 +36,29 @@ func _on_SpawnTimer_timeout():
 	var node = nodes[randi() % nodes.size()]
 	var position = node.position
 	$SpawnLocation.position = position
+
+
+func _on_FastSpawnTimer_timeout():
+	var enemy_instance = fast_enemy.instance()
+	add_child(enemy_instance)
+	enemy_instance.position = $SpawnLocation.position
+	
+	var nodes = get_tree().get_nodes_in_group("spawn")
+	var node = nodes[randi() % nodes.size()]
+	var position = node.position
+	$SpawnLocation.position = position
+	pass # Replace with function body.
+
+
+func _on_BigSpawnTimer_timeout():
+	var enemy_instance = big_enemy.instance()
+	add_child(enemy_instance)
+	enemy_instance.position = $SpawnLocation.position
+	
+	var nodes = get_tree().get_nodes_in_group("spawn")
+	var node = nodes[randi() % nodes.size()]
+	var position = node.position
+	$SpawnLocation.position = position
+	pass # Replace with function body.
+
+	pass # Replace with function body.

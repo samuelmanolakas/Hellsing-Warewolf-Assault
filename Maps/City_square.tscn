@@ -20,6 +20,14 @@ texture = ExtResource( 5 )
 wait_time = 5.0
 autostart = true
 
+[node name="FastSpawnTimer" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[node name="BigSpawnTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [node name="Position2D" type="Position2D" parent="." groups=[
 "spawn",
 ]]
@@ -62,3 +70,5 @@ position = Vector2( 966.855, -770.081 )
 z_index = 1
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+[connection signal="timeout" from="FastSpawnTimer" to="." method="_on_FastSpawnTimer_timeout"]
+[connection signal="timeout" from="BigSpawnTimer" to="." method="_on_BigSpawnTimer_timeout"]
