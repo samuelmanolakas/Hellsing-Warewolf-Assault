@@ -7,6 +7,7 @@ func set_health(new_health: int):
 	health = clamp(new_health, 0, 100)
 
 func _process(delta):
-	print (health)
+	#print (health)
 	if health <= 0:
-		print("Enemy is dead!")
+		#print("Enemy is dead!")
+		pass
