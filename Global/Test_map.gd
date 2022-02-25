@@ -19,11 +19,43 @@ func _process(delta):
 		wave_check()
 
 func wave_check():
-	timer.stop()
-	print("stop")
-	timer.set_wait_time(1)
-	next_wave.visible = true
-	timer.start()
+	if Global.wave_num == 1:
+		timer.stop()
+		print("stop")
+		timer.set_wait_time(5)
+		next_wave.visible = true
+		timer.start()
+	
+	elif Global.wave_num == 2:
+		timer.stop()
+		print("stop")
+		timer.set_wait_time(4)
+		next_wave.visible = true
+		timer.start()
+		
+	elif Global.wave_num == 3:
+		timer.stop()
+		print("stop")
+		timer.set_wait_time(3)
+		next_wave.visible = true
+		timer.start()
+		
+	elif Global.wave_num == 4:
+		timer.stop()
+		print("stop")
+		timer.set_wait_time(2)
+		next_wave.visible = true
+		timer.start()
+		
+	elif Global.wave_num == 5:
+		timer.stop()
+		print("stop")
+		timer.set_wait_time(1)
+		next_wave.visible = true
+		timer.start()
+
+
+
 
 
 func _on_SpawnTimer_timeout():
