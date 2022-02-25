@@ -10,7 +10,7 @@ func set_health(new_health: int):
 	emit_signal("player_health_changed", health)
 	
 func _process(delta):
-	print (health)
+	#print (health)
 	if health <= 0:
 		print("Player is dead!")
 		get_tree().change_scene("res://Global/Death/Death.tscn")
