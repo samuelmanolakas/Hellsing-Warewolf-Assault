@@ -13,4 +13,4 @@ func _process(delta):
 	print (health)
 	if health <= 0:
 		print("Player is dead!")
-		get_tree().change_scene("res://Death.tscn")
+		get_tree().change_scene("res://Global/Death/Death.tscn")

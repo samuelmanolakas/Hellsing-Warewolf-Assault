@@ -11,18 +11,19 @@ config_version=4
 [application]
 
 config/name="Hellsing: Werewolf Assault "
-run/main_scene="res://Menu.tscn"
+run/main_scene="res://Global/Menu/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Global.gd"
+Global="*res://Global/Global.gd"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
 window/size/resizable=false
+window/size/fullscreen=true
 
 [input]
 

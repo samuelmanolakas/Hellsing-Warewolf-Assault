@@ -44,9 +44,11 @@ func _physics_process(delta: float) -> void:
 
 func _input(event):
 	if Input.is_action_pressed("shoot"):
-		player_animation.play("Idle")
+		#player_animation.play("Idle")
+		pass
 	else:
-		player_animation.stop()
+		#player_animation.stop()
+		pass
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("shoot"):
