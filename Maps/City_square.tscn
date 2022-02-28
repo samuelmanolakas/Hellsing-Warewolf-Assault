@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Actors/Enemies/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Players/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://Global/Bullet/Bullet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Global/SpawnLocation.tscn" type="PackedScene" id=8]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 1560.33, 588.914, 2892.83, 1716.28, -690.886, 1705.76, 1241.23, 592.42, 667.91, 592.42, 1241.23, 396.053, 380.371, 580.147, -675.106, -1041.64, 387.384, 376.766, 2871.79, -1027.61, 1558.58, 389.039, 657.39, 371.507 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ), PoolIntArray( 6, 4, 2 ), PoolIntArray( 6, 2, 7, 8 ), PoolIntArray( 9, 1, 0, 10 ), PoolIntArray( 7, 9, 10, 5, 11 ), PoolIntArray( 5, 4, 11 ), PoolIntArray( 7, 11, 8 ) ]
+outlines = [ PoolVector2Array( -675.106, -1041.64, -690.886, 1705.76, 2892.83, 1716.28, 2871.79, -1027.61 ), PoolVector2Array( 387.384, 376.766, 380.371, 580.147, 667.91, 592.42, 657.39, 371.507 ), PoolVector2Array( 1241.23, 396.053, 1241.23, 592.42, 1560.33, 588.914, 1558.58, 389.039 ) ]
 
 [node name="Test_map" type="Node2D"]
 script = ExtResource( 4 )
@@ -68,6 +73,12 @@ script = ExtResource( 3 )
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
 position = Vector2( 966.855, -770.081 )
 z_index = 1
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -1.75317, 0 )
+navpoly = SubResource( 1 )
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 [connection signal="timeout" from="FastSpawnTimer" to="." method="_on_FastSpawnTimer_timeout"]
