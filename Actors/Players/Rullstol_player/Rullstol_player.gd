@@ -22,25 +22,29 @@ func _ready():
 	pass # Replace with function body.
 
 
+export (float) var rotation_speed = 1.5
 
+var velocity = Vector2()
+var rotation_dir = 0
 
-func _physics_process(delta: float) -> void:
-	var movement_direction := Vector2.ZERO
-
-	if Input.is_action_pressed("up"):
-		movement_direction.y = -1
-	if Input.is_action_pressed("down"):
-		movement_direction.y = 1
-	if Input.is_action_pressed("left"):
-		movement_direction.x = -1
+func get_input():
+	rotation_dir = 0
+	velocity = Vector2()
 	if Input.is_action_pressed("right"):
-		movement_direction.x = 1
+		rotation_dir += 1
+	if Input.is_action_pressed("left"):
+		rotation_dir -= 1
+	if Input.is_action_pressed("down"):
+		velocity = Vector2(-speed, 0).rotated(rotation)
+	if Input.is_action_pressed("up"):
+		velocity = Vector2(speed, 0).rotated(rotation)
 
-	movement_direction = movement_direction.normalized()
-	move_and_slide(movement_direction * speed)
+func _physics_process(delta):
+	get_input()
+	rotation += rotation_dir * rotation_speed * delta
+	velocity = move_and_slide(velocity)
 
-	look_at(get_global_mouse_position())
-	_input(self)
+
 
 func _input(event):
 	if Input.is_action_pressed("shoot"):
@@ -62,6 +66,7 @@ func shoot():
 		emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
 		$AudioStreamPlayer.play()
 		attack_cooldown.start()
+
 
 
 func handle_hit():

@@ -14,7 +14,7 @@ onready var gun_direction = $GunDirection
 onready var health_stat = $Health
 onready var gui = $GUI
 onready var player_animation = $Torso/AnimationPlayer
-
+onready var attack_cooldown = $Attackcooldown
 
 func _ready():
 	gui.set_new_health_value(self.health_stat.health)
@@ -56,10 +56,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 
 func shoot():
-	var bullet_instance = Bullet.instance()
-	var direction = (gun_direction.global_position - end_of_gun.global_position).normalized()
-	emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
-	$AudioStreamPlayer.play()
+	if attack_cooldown.is_stopped():
+		var bullet_instance = Bullet.instance()
+		var direction = (gun_direction.global_position - end_of_gun.global_position).normalized()
+		emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
+		$AudioStreamPlayer.play()
+		attack_cooldown.start()
 
 
 
