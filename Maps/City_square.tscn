@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Actors/Enemies/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Players/Player.tscn" type="PackedScene" id=2]
@@ -6,11 +6,65 @@
 [ext_resource path="res://Global/Test_map.gd" type="Script" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://Global/Bullet/Bullet.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Graphic/Test_tiles/galletcity-big.png" type="Texture" id=7]
 [ext_resource path="res://Global/SpawnLocation.tscn" type="PackedScene" id=8]
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 288, 192, 0, 192, 0, 32, 288, 32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
-[sub_resource type="NavigationPolygon" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 480, 672, 0, 672, 0, 0, 480, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 416, 0, 416, 672, 0, 672 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "galletcity-big.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 320, 4128, 544, 736 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/navigation = SubResource( 1 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "galletcity-big.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 864, 4128, 480, 736 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 5 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="NavigationPolygon" id=4]
 vertices = PoolVector2Array( 1560.33, 588.914, 2892.83, 1716.28, -690.886, 1705.76, 1241.23, 592.42, 667.91, 592.42, 1241.23, 396.053, 380.371, 580.147, -675.106, -1041.64, 387.384, 376.766, 2871.79, -1027.61, 1558.58, 389.039, 657.39, 371.507 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ), PoolIntArray( 6, 4, 2 ), PoolIntArray( 6, 2, 7, 8 ), PoolIntArray( 9, 1, 0, 10 ), PoolIntArray( 7, 9, 10, 5, 11 ), PoolIntArray( 5, 4, 11 ), PoolIntArray( 7, 11, 8 ) ]
 outlines = [ PoolVector2Array( -675.106, -1041.64, -690.886, 1705.76, 2892.83, 1716.28, 2871.79, -1027.61 ), PoolVector2Array( 387.384, 376.766, 380.371, 580.147, 667.91, 592.42, 657.39, 371.507 ), PoolVector2Array( 1241.23, 396.053, 1241.23, 592.42, 1560.33, 588.914, 1558.58, 389.039 ) ]
@@ -21,6 +75,7 @@ script = ExtResource( 4 )
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 format = 1
+tile_data = PoolIntArray( -1572876, 0, 0, -1572868, 1, 0, -1638397, 0, 0, -1638389, 1, 0, -1638382, 0, 0, -1638374, 1, 0, -1638367, 0, 0, -1638359, 1, 0, -1507347, 1, 0, -1245144, 0, 0, -1048596, 0, 0, -851928, 0, 0, -589843, 1, 0, -327640, 1, 0, -20, 0, 0, 196648, 0, 0, 655341, 1, 0, 720936, 1, 0, 1179628, 0, 0, 1245224, 0, 0, 1703917, 1, 0, 1703924, 0, 0, 1703932, 1, 0, 1638404, 0, 0, 1638412, 1, 0, 1638420, 0, 0, 1638428, 1, 0, 1638436, 0, 0, 1638444, 1, 0 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 950.352, 463.862 )
@@ -85,7 +140,7 @@ visible = false
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 position = Vector2( -1.75317, 0 )
-navpoly = SubResource( 2 )
+navpoly = SubResource( 4 )
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 [connection signal="timeout" from="FastSpawnTimer" to="." method="_on_FastSpawnTimer_timeout"]
