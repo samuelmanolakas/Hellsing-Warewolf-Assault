@@ -22,15 +22,15 @@ scale = Vector2( 40, 30 )
 texture = ExtResource( 5 )
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 8.0
 autostart = true
 
 [node name="FastSpawnTimer" type="Timer" parent="."]
-wait_time = 7.0
+wait_time = 9.22337e+18
 autostart = true
 
 [node name="BigSpawnTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 9.22337e+18
 autostart = true
 
 [node name="Position2D" type="Position2D" parent="." groups=[

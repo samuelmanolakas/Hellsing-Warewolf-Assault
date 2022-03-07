@@ -3,6 +3,8 @@ extends Node2D
 onready var bullet_manager = $BulletManager
 onready var player = $Player
 onready var timer = get_node("SpawnTimer")
+onready var fast_timer = get_node("FastSpawnTimer")
+onready var big_timer = get_node("BigSpawnTimer")
 onready var next_wave = get_node("Player/GUI/Control2/Next_wave_text")
 
 var enemy = preload("res://Actors/Enemies/Enemy.tscn")
@@ -25,38 +27,120 @@ func wave_check():
 		timer.set_wait_time(5)
 		next_wave.visible = true
 		timer.start()
+
+
 	
 	elif Global.wave_num == 2:
-		timer.stop()
-		print("stop")
-		timer.set_wait_time(4)
-		next_wave.visible = true
-		timer.start()
-		
-	elif Global.wave_num == 3:
 		timer.stop()
 		print("stop")
 		timer.set_wait_time(3)
 		next_wave.visible = true
 		timer.start()
-		
+
+	
+	elif Global.wave_num == 3:
+		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
+		print("stop")
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
+		next_wave.visible = true
+		timer.start()
+		big_timer.start()
+		fast_timer.start()
+	
 	elif Global.wave_num == 4:
 		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(2)
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
 		next_wave.visible = true
 		timer.start()
-		
+		big_timer.start()
+		fast_timer.start()
+	
 	elif Global.wave_num == 5:
 		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(1)
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
 		next_wave.visible = true
 		timer.start()
-
-
-
-
+		big_timer.start()
+		fast_timer.start()
+	
+	elif Global.wave_num == 6:
+		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
+		print("stop")
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
+		next_wave.visible = true
+		timer.start()
+		big_timer.start()
+		fast_timer.start()
+	
+	elif Global.wave_num == 7:
+		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
+		print("stop")
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
+		next_wave.visible = true
+		timer.start()
+		big_timer.start()
+		fast_timer.start()
+	
+	elif Global.wave_num == 8:
+		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
+		print("stop")
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
+		next_wave.visible = true
+		timer.start()
+		big_timer.start()
+		fast_timer.start()
+	
+	elif Global.wave_num == 9:
+		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
+		print("stop")
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
+		next_wave.visible = true
+		timer.start()
+		big_timer.start()
+		fast_timer.start()
+	
+	elif Global.wave_num == 10:
+		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
+		print("stop")
+		timer.set_wait_time(10)
+		fast_timer.set_wait_time(5)
+		big_timer.set_wait_time(10)
+		next_wave.visible = true
+		timer.start()
+		big_timer.start()
+		fast_timer.start()
 
 func _on_SpawnTimer_timeout():
 	next_wave.visible = false
