@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Graphic/Player/Top-Down_Shooter_v2_1_Flat (1).png" type="Texture" id=1]
+[ext_resource path="res://Graphic/Player/Pixel player sprites.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Players/Player.gd" type="Script" id=2]
 [ext_resource path="res://Global/Bullet/Bullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Global/Health/Health.tscn" type="PackedScene" id=4]
