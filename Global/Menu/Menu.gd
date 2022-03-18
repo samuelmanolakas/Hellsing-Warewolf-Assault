@@ -19,3 +19,18 @@ func _on_CreditsButton_pressed():
 func _on_EndButton_pressed():
 	get_tree().quit()
 	pass # Replace with function body.
+
+
+func _on_Plasma_pressed():
+	Global.char_choise = 1
+	pass # Replace with function body.
+
+
+func _on_Shotgun_pressed():
+	Global.char_choise = 2
+	pass # Replace with function body.
+
+
+func _on_Rullstol_pressed():
+	Global.char_choise = 3
+	pass # Replace with function body.

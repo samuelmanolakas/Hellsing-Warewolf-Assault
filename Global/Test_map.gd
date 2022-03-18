@@ -10,10 +10,13 @@ onready var next_wave = get_node("Player/GUI/Control2/Next_wave_text")
 var enemy = preload("res://Actors/Enemies/Enemy.tscn")
 var fast_enemy = preload("res://Actors/Enemies/Fast_enemy/FastEnemy.tscn")
 var big_enemy = preload("res://Actors/Enemies/Big_enemy/BigEnemy.tscn")
+var player_name = 0
 
 func _ready() -> void:
+	player_name = Global.char_choise
 	player.connect("player_fired_bullet", bullet_manager,"handle_bullet_spawned")
 	Global.score = 0
+	print(player_name)
 
 
 func _process(delta):
