@@ -69,8 +69,8 @@ func wave_check():
 		big_timer.stop()
 		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(10)
-		fast_timer.set_wait_time(5)
+		timer.set_wait_time(8)
+		fast_timer.set_wait_time(4)
 		big_timer.set_wait_time(10)
 		next_wave.visible = true
 		timer.start()
@@ -82,8 +82,8 @@ func wave_check():
 		big_timer.stop()
 		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(10)
-		fast_timer.set_wait_time(5)
+		timer.set_wait_time(7)
+		fast_timer.set_wait_time(4)
 		big_timer.set_wait_time(10)
 		next_wave.visible = true
 		timer.start()
@@ -95,9 +95,9 @@ func wave_check():
 		big_timer.stop()
 		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(10)
-		fast_timer.set_wait_time(5)
-		big_timer.set_wait_time(10)
+		timer.set_wait_time(7)
+		fast_timer.set_wait_time(4)
+		big_timer.set_wait_time(8)
 		next_wave.visible = true
 		timer.start()
 		big_timer.start()
@@ -108,9 +108,9 @@ func wave_check():
 		big_timer.stop()
 		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(10)
-		fast_timer.set_wait_time(5)
-		big_timer.set_wait_time(10)
+		timer.set_wait_time(6)
+		fast_timer.set_wait_time(4)
+		big_timer.set_wait_time(8)
 		next_wave.visible = true
 		timer.start()
 		big_timer.start()
@@ -121,9 +121,9 @@ func wave_check():
 		big_timer.stop()
 		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(10)
-		fast_timer.set_wait_time(5)
-		big_timer.set_wait_time(10)
+		timer.set_wait_time(5)
+		fast_timer.set_wait_time(3)
+		big_timer.set_wait_time(8)
 		next_wave.visible = true
 		timer.start()
 		big_timer.start()
@@ -134,13 +134,21 @@ func wave_check():
 		big_timer.stop()
 		fast_timer.stop()
 		print("stop")
-		timer.set_wait_time(10)
-		fast_timer.set_wait_time(5)
-		big_timer.set_wait_time(10)
+		timer.set_wait_time(4)
+		fast_timer.set_wait_time(3)
+		big_timer.set_wait_time(7)
 		next_wave.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
+
+	elif Global.wave_num == 12:
+		timer.stop()
+		big_timer.stop()
+		fast_timer.stop()
+
+
+
 
 func _on_SpawnTimer_timeout():
 	next_wave.visible = false
