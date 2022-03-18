@@ -8,10 +8,10 @@
 [ext_resource path="res://Actors/Enemies/AI/AI.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 77.9994, 19.912 )
+extents = Vector2( 67.675, 17.0253 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 78.5497, 19.7678 )
+extents = Vector2( 67.8244, 18.5455 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 54.6362
@@ -31,15 +31,15 @@ script = ExtResource( 1 )
 modulate = Color( 0.862745, 0.0235294, 0.0235294, 1 )
 position = Vector2( -14.4368, 1.25537 )
 rotation = 1.5708
-scale = Vector2( 1.4, 1.4 )
+scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( 18.3515, 52.9886 )
+position = Vector2( 15.2334, 44.0796 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( 23.993, -45.2719 )
+position = Vector2( 20.8748, -40.8174 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -63,7 +63,7 @@ shape = SubResource( 4 )
 [node name="PlayerDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
-position = Vector2( 67.9679, 2.68424 )
+position = Vector2( 47.9227, -0.433916 )
 shape = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

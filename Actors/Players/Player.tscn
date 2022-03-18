@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Graphic/Player/Pixel player sprites.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Players/Player.gd" type="Script" id=2]
@@ -8,14 +8,11 @@
 [ext_resource path="res://Sounds/weapon_fire.wav" type="AudioStream" id=6]
 [ext_resource path="res://Sounds/ambient_sounds.wav" type="AudioStream" id=7]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 53.4188
-
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 137.267, 37.4685 )
+extents = Vector2( 81.7188, 25.6342 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 28.1743
+radius = 28.1929
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
@@ -25,9 +22,9 @@ script = ExtResource( 2 )
 Bullet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -30.1464, -43.4452 )
+position = Vector2( -40.2902, -27.061 )
 rotation = 1.5708
-scale = Vector2( 0.739353, 0.694973 )
+scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 381, 347, 199, 183 )
@@ -42,27 +39,19 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 580, 0, 130, 340 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -31.027, -43.9946 )
-shape = SubResource( 1 )
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -11.1086, 8.58171 )
+position = Vector2( -30.4638, 0.572701 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( -40.0858, -86.9252 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2( -46.7615, -2.09363 )
+position = Vector2( -38.7509, -35.5339 )
 shape = SubResource( 3 )
 
 [node name="EndOfGun" type="Position2D" parent="."]
-position = Vector2( 150.129, 0 )
+position = Vector2( 52.4896, -3.65105 )
 
 [node name="GunDirection" type="Position2D" parent="."]
-position = Vector2( 157.148, 0 )
+position = Vector2( 56.2308, -3.65104 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
 position = Vector2( -11.3884, -8.5364 )
