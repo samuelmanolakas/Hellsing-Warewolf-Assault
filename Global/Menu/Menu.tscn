@@ -76,6 +76,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Plasma" type="Button" parent="."]
+margin_left = 1298.65
+margin_top = 191.081
+margin_right = 1480.65
+margin_bottom = 258.081
+text = "Plasma"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shotgun" type="Button" parent="."]
+margin_left = 1295.98
+margin_top = 284.52
+margin_right = 1477.98
+margin_bottom = 351.52
+text = "Shotgun"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rullstol" type="Button" parent="."]
+margin_left = 1294.65
+margin_top = 372.62
+margin_right = 1476.65
+margin_bottom = 439.62
+text = "Rollstul"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="EndButton" to="." method="_on_EndButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
