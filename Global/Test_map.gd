@@ -12,11 +12,24 @@ var fast_enemy = preload("res://Actors/Enemies/Fast_enemy/FastEnemy.tscn")
 var big_enemy = preload("res://Actors/Enemies/Big_enemy/BigEnemy.tscn")
 var player_name = 0
 
+
 func _ready() -> void:
 	player_name = Global.char_choise
 	player.connect("player_fired_bullet", bullet_manager,"handle_bullet_spawned")
 	Global.score = 0
-	print(player_name)
+	if player_name == 1:
+		var player1 = load("res://Actors/Players/Player.tscn").instance()
+		player1.position = Vector2(500, 500)
+		add_child(player1)
+	elif player_name == 2:
+		var player2 = load("res://Actors/Players/Shotgun_player/ShotgunPlayer.tscn").instance()
+		player2.position = Vector2(500, 500)
+		add_child(player2)
+	elif player_name == 3:
+		var player3 = load("res://Actors/Players/Rullstol_player/Rullstol_player.tscn").instance()
+		player3.position = Vector2(500, 500)
+		add_child(player3)
+
 
 
 func _process(delta):
