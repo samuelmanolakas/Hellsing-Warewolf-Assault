@@ -89,31 +89,31 @@ __meta__ = {
 [node name="Rows" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 40.0
 margin_top = 40.0
-margin_right = 920.0
-margin_bottom = 500.0
+margin_right = 1560.0
+margin_bottom = 860.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TopRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_right = 880.0
-margin_bottom = 75.0
+margin_right = 1520.0
+margin_bottom = 135.0
 mouse_filter = 2
 size_flags_vertical = 3
 
 [node name="MiddleRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_top = 79.0
-margin_right = 880.0
-margin_bottom = 380.0
+margin_top = 139.0
+margin_right = 1520.0
+margin_bottom = 680.0
 mouse_filter = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
 [node name="BottomRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_top = 384.0
-margin_right = 880.0
-margin_bottom = 460.0
+margin_top = 684.0
+margin_right = 1520.0
+margin_bottom = 820.0
 mouse_filter = 2
 size_flags_vertical = 3
 
