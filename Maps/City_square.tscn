@@ -1,9 +1,10 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Actors/Enemies/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Players/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Global/BulletManager.gd" type="Script" id=3]
 [ext_resource path="res://Global/Test_map.gd" type="Script" id=4]
+[ext_resource path="res://Global/GUI/PauseMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Global/Bullet/Bullet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Graphic/Test_tiles/galletcity-big.png" type="Texture" id=7]
 [ext_resource path="res://Global/SpawnLocation.tscn" type="PackedScene" id=8]
@@ -1042,6 +1043,10 @@ outlines = [ PoolVector2Array( -499.279, -1017.17, -491.519, 1933.02, 2741.35, 1
 
 [node name="Test_map" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu2" parent="CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 34 )
