@@ -1,6 +1,7 @@
 extends Node
 
 var score = 0
+var char_choise = 0
 
 var wave_count = 0
 var wave_num = 0
