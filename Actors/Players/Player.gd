@@ -67,7 +67,6 @@ func shoot():
 		attack_cooldown.start()
 
 
-
 func handle_hit():
 	health_stat.health -= 20
 	print("player Hit!", health_stat.health)

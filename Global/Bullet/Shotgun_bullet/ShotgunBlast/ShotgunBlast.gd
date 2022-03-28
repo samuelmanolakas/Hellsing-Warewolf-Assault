@@ -10,6 +10,7 @@ onready var kill_timer = $KillTimer
 
 func _ready():
 	kill_timer.start()
+	set_direction(direction)
 
 
 func _process(delta):

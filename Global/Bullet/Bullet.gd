@@ -7,11 +7,10 @@ var direction := Vector2.ZERO
 
 onready var kill_timer = $KillTimer
 
+
 func _ready() -> void:
 	kill_timer.start()
-
-
-
+	set_direction(direction)
 
 func _physics_process(delta: float) -> void:
 	if direction != Vector2.ZERO:
