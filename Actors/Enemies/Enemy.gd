@@ -7,7 +7,7 @@ var path = []
 onready var navigation = get_node("../Navigation2D")
 onready var health_stat = $Enemy_health
 onready var ai = $AI
-onready var player = $Player
+onready var player = get_node("../Player")
 
 func _ready():
 	ai.initialize(self)
@@ -24,7 +24,7 @@ func _physics_process(delta):
 func _process(delta):
 	var walk_distance = run_speed * delta
 	move_along_path(walk_distance)
-	if player:
+	if player != null:
 		_update_navigation_path(position, player.get_global_position())
 
 func handle_hit():
