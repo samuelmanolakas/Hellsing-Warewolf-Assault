@@ -1,7 +1,6 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Actors/Enemies/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Actors/Players/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Global/BulletManager.gd" type="Script" id=3]
 [ext_resource path="res://Global/Test_map.gd" type="Script" id=4]
 [ext_resource path="res://Global/GUI/PauseMenu.tscn" type="PackedScene" id=5]
@@ -1047,6 +1046,7 @@ script = ExtResource( 4 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu2" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 34 )
@@ -1088,13 +1088,6 @@ position = Vector2( 2312.86, 441.734 )
 
 [node name="SpawnLocation" parent="." instance=ExtResource( 8 )]
 position = Vector2( 965.421, -627.39 )
-
-[node name="Player" parent="." instance=ExtResource( 2 )]
-light_mask = 0
-position = Vector2( 962.009, 543.428 )
-z_index = 1
-collision_layer = 3
-collision_mask = 3
 
 [node name="Bullet" parent="." instance=ExtResource( 6 )]
 position = Vector2( -2416.58, -1215.66 )

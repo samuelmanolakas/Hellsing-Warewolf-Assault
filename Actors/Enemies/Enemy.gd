@@ -24,7 +24,8 @@ func _physics_process(delta):
 func _process(delta):
 	var walk_distance = run_speed * delta
 	move_along_path(walk_distance)
-	_update_navigation_path(position, player.get_global_position())
+	if player != null:
+		_update_navigation_path(position, player.get_global_position())
 
 func handle_hit():
 	health_stat.health -= 20
