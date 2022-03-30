@@ -1047,6 +1047,7 @@ script = ExtResource( 4 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu2" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 34 )
