@@ -4,7 +4,7 @@
 [ext_resource path="res://Graphic/bubble_text.png" type="Texture" id=2]
 [ext_resource path="res://General/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Graphic/Testpixel.webp" type="Texture" id=4]
-[ext_resource path="res://Sounds/Nanoskelleton.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/Rasmus_story.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -50,6 +50,6 @@ position = Vector2( 801.169, 445.79 )
 scale = Vector2( 1.23081, 1.02284 )
 texture = ExtResource( 4 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Rasmus_story" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
