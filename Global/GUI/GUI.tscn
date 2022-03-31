@@ -164,6 +164,7 @@ __meta__ = {
 stream = ExtResource( 5 )
 
 [node name="Next_wave_text" type="RichTextLabel" parent="Control2"]
+visible = false
 margin_left = 600.0
 margin_top = 200.0
 margin_right = 963.0
