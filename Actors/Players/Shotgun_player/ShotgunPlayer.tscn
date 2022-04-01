@@ -20,6 +20,7 @@ extents = Vector2( 12.647, 13.3015 )
 "player",
 ]]
 position = Vector2( 245.879, 93.9153 )
+scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 2 )
 Bullet = ExtResource( 3 )
 
@@ -27,13 +28,13 @@ Bullet = ExtResource( 3 )
 position = Vector2( -32.946, -14.1419 )
 rotation = 1.5708
 scale = Vector2( 0.361924, 0.339104 )
+z_index = 1
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 660, 380, 170, 150 )
 
 [node name="Sprite" type="Sprite" parent="Sprite"]
 position = Vector2( 39.6479, -74.7912 )
-z_index = -1
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 770, 230, 120, 150 )
@@ -43,7 +44,7 @@ position = Vector2( -32.2546, -8.93716 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -0.0343351, 2.48842 )
+position = Vector2( -0.978258, 2.17379 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]

@@ -63,7 +63,10 @@ func shoot():
 	if attack_cooldown.is_stopped():
 		var bullet_instance = Bullet.instance()
 		var direction = (gun_direction.global_position - end_of_gun.global_position).normalized()
-		emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
+		bullet_instance.global_position = end_of_gun.global_position
+		bullet_instance.direction = direction
+		get_parent().add_child(bullet_instance)
+		#emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
 		$AudioStreamPlayer.play()
 		attack_cooldown.start()
 

@@ -19,15 +19,15 @@ func _ready() -> void:
 	Global.score = 0
 	if player_name == 1:
 		var player1 = load("res://Actors/Players/Player.tscn").instance()
-		player1.position = Vector2(500, 500)
+		player1.position = Vector2(1100, 410)
 		add_child(player1)
 	elif player_name == 2:
 		var player2 = load("res://Actors/Players/Shotgun_player/ShotgunPlayer.tscn").instance()
-		player2.position = Vector2(500, 500)
+		player2.position = Vector2(1100, 410)
 		add_child(player2)
 	elif player_name == 3:
 		var player3 = load("res://Actors/Players/Rullstol_player/Rullstol_player.tscn").instance()
-		player3.position = Vector2(500, 500)
+		player3.position = Vector2(1100, 410)
 		add_child(player3)
 
 
@@ -40,7 +40,7 @@ func wave_check():
 		timer.stop()
 		print("stop")
 		timer.set_wait_time(5)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 
 
@@ -49,7 +49,7 @@ func wave_check():
 		timer.stop()
 		print("stop")
 		timer.set_wait_time(3)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 
 	
@@ -61,7 +61,7 @@ func wave_check():
 		timer.set_wait_time(10)
 		fast_timer.set_wait_time(5)
 		big_timer.set_wait_time(10)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -74,7 +74,7 @@ func wave_check():
 		timer.set_wait_time(10)
 		fast_timer.set_wait_time(5)
 		big_timer.set_wait_time(10)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -87,7 +87,7 @@ func wave_check():
 		timer.set_wait_time(8)
 		fast_timer.set_wait_time(4)
 		big_timer.set_wait_time(10)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -100,7 +100,7 @@ func wave_check():
 		timer.set_wait_time(7)
 		fast_timer.set_wait_time(4)
 		big_timer.set_wait_time(10)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -113,7 +113,7 @@ func wave_check():
 		timer.set_wait_time(7)
 		fast_timer.set_wait_time(4)
 		big_timer.set_wait_time(8)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -126,7 +126,7 @@ func wave_check():
 		timer.set_wait_time(6)
 		fast_timer.set_wait_time(4)
 		big_timer.set_wait_time(8)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -139,7 +139,7 @@ func wave_check():
 		timer.set_wait_time(5)
 		fast_timer.set_wait_time(3)
 		big_timer.set_wait_time(8)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -152,7 +152,7 @@ func wave_check():
 		timer.set_wait_time(4)
 		fast_timer.set_wait_time(3)
 		big_timer.set_wait_time(7)
-		$Player/GUI/Control2/next_wave.visible = true
+		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
 		fast_timer.start()
@@ -166,7 +166,7 @@ func wave_check():
 
 
 func _on_SpawnTimer_timeout():
-	$Player/GUI/Control2/next_wave.visible = false
+	$Player/GUI/Control2/Next_wave_text.visible = false
 	var enemy_instance = enemy.instance()
 	add_child(enemy_instance)
 	enemy_instance.position = $SpawnLocation.position
