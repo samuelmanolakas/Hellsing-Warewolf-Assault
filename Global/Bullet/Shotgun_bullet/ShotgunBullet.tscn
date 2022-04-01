@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://NemoW/bullet.png" type="Texture" id=1]
+[ext_resource path="res://Graphic/image (5).png" type="Texture" id=1]
 [ext_resource path="res://Global/Bullet/Shotgun_bullet/ShotgunBullet.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -18,8 +18,9 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 0.937255, 0, 1 )
-self_modulate = Color( 1, 0.937255, 0, 1 )
+modulate = Color( 1, 0.843137, 0, 1 )
+self_modulate = Color( 0.835294, 0.486275, 0.419608, 1 )
+position = Vector2( -7.99566, -0.242292 )
 rotation = 1.5708
 scale = Vector2( 0.09, 0.09 )
 texture = ExtResource( 1 )
