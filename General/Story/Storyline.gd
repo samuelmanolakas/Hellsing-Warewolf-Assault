@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_Button_pressed():
+	get_tree().change_scene("res://Maps/City_square.tscn")
 	pass # Replace with function body.
