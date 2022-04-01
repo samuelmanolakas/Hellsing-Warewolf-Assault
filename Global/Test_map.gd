@@ -19,15 +19,15 @@ func _ready() -> void:
 	Global.score = 0
 	if player_name == 1:
 		var player1 = load("res://Actors/Players/Player.tscn").instance()
-		player1.position = Vector2(500, 500)
+		player1.position = Vector2(1100, 410)
 		add_child(player1)
 	elif player_name == 2:
 		var player2 = load("res://Actors/Players/Shotgun_player/ShotgunPlayer.tscn").instance()
-		player2.position = Vector2(500, 500)
+		player2.position = Vector2(1100, 410)
 		add_child(player2)
 	elif player_name == 3:
 		var player3 = load("res://Actors/Players/Rullstol_player/Rullstol_player.tscn").instance()
-		player3.position = Vector2(500, 500)
+		player3.position = Vector2(1100, 410)
 		add_child(player3)
 
 
