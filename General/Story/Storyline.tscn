@@ -57,6 +57,7 @@ scale = Vector2( 1.23081, 1.02284 )
 texture = ExtResource( 4 )
 
 [node name="Rasmus_story" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 847.623, 523.257 )
 stream = ExtResource( 5 )
 autoplay = true
 
