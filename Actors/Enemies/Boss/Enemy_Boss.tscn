@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Actors/Enemies/Boss/Enemy_Boss.gd" type="Script" id=1]
 [ext_resource path="res://Sounds/enemy_attack.wav" type="AudioStream" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://Global/Health/Enemy_health.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Actors/Enemies/AI/AI.gd" type="Script" id=6]
 [ext_resource path="res://Graphic/3 fireballs.png" type="Texture" id=7]
+[ext_resource path="res://Global/Bullet/Bullet.tscn" type="PackedScene" id=8]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 24.0469
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 43.0712, 8.53722 )
@@ -29,28 +33,41 @@ extents = Vector2( 14.8056, 32.9308 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
+Bullet = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -14.4368, 1.25537 )
 rotation = 1.5708
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 
-[node name="Fireballs" type="Sprite" parent="."]
-position = Vector2( -1.10295, -0.0881515 )
-scale = Vector2( 0.688972, 1.1123 )
+[node name="FireBalls" type="Area2D" parent="."]
+
+[node name="Fireballs" type="Sprite" parent="FireBalls"]
+z_index = 1
 texture = ExtResource( 7 )
 
+[node name="Fireball1" type="CollisionShape2D" parent="FireBalls"]
+position = Vector2( -1.5874, -157.946 )
+shape = SubResource( 6 )
+
+[node name="Fireball2" type="CollisionShape2D" parent="FireBalls"]
+position = Vector2( 180.17, 156.359 )
+shape = SubResource( 6 )
+
+[node name="Fireball3" type="CollisionShape2D" parent="FireBalls"]
+position = Vector2( -184.138, 154.772 )
+shape = SubResource( 6 )
+
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( -10.5049, 22.6836 )
+position = Vector2( 3.84463, 21.6825 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -6.7662, -20.4977 )
+position = Vector2( 7.58333, -20.164 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -34.967, 0.0607438 )
+position = Vector2( -26.6243, 0.394454 )
 shape = SubResource( 3 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
@@ -70,11 +87,23 @@ shape = SubResource( 4 )
 [node name="PlayerDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
-position = Vector2( 27.5608, 3.90403 )
+position = Vector2( 36.571, 3.90403 )
 shape = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
+[node name="EndOfGun" type="Position2D" parent="."]
+position = Vector2( 60, 0 )
+
+[node name="GunDirection" type="Position2D" parent="."]
+position = Vector2( 65, 0 )
+
+[node name="FireTimer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="body_entered" from="FireBalls" to="." method="_on_FireBalls_body_entered"]
 [connection signal="body_entered" from="AI/PlayerDetectionZone" to="AI" method="_on_PlayerDetectionZone_body_entered"]
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]
+[connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]
