@@ -5,11 +5,13 @@ onready var player = $Player
 onready var timer = get_node("SpawnTimer")
 onready var fast_timer = get_node("FastSpawnTimer")
 onready var big_timer = get_node("BigSpawnTimer")
+onready var boss_timer = get_node("BossTimer")
 
 
 var enemy = preload("res://Actors/Enemies/Enemy.tscn")
 var fast_enemy = preload("res://Actors/Enemies/Fast_enemy/FastEnemy.tscn")
 var big_enemy = preload("res://Actors/Enemies/Big_enemy/BigEnemy.tscn")
+var boss_enemy = preload("res://Actors/Enemies/Boss/Enemy_Boss.tscn")
 var player_name = 0
 
 
@@ -38,10 +40,12 @@ func _process(delta):
 func wave_check():
 	if Global.wave_num == 1:
 		timer.stop()
+		boss_timer.stop()
 		print("stop")
 		timer.set_wait_time(5)
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
+		boss_timer.start()
 
 	
 	elif Global.wave_num == 2:
@@ -199,4 +203,16 @@ func _on_BigSpawnTimer_timeout():
 	$SpawnLocation.position = position
 	pass # Replace with function body.
 
+	pass # Replace with function body.
+
+
+func _on_BossTimer_timeout():
+	var enemy_instance = boss_enemy.instance()
+	add_child(enemy_instance)
+	enemy_instance.position = $SpawnLocation.position
+	var nodes = get_tree().get_nodes_in_group("spawn")
+	var node = nodes[randi() % nodes.size()]
+	var position = node.position
+	$SpawnLocation.position = position
+	pass # Replace with function body.
 	pass # Replace with function body.
