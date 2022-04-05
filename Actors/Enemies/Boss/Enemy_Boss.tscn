@@ -9,22 +9,22 @@
 [ext_resource path="res://Graphic/3 fireballs.png" type="Texture" id=7]
 [ext_resource path="res://Global/Bullet/Bullet.tscn" type="PackedScene" id=8]
 
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CircleShape2D" id=1]
 radius = 24.0469
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 43.0712, 8.53722 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 44.1001, 7.99929 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=4]
 radius = 35.2418
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=5]
 radius = 22272.1
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 14.8056, 32.9308 )
 
 [node name="Enemy" type="KinematicBody2D" groups=[
@@ -48,27 +48,27 @@ texture = ExtResource( 7 )
 
 [node name="Fireball1" type="CollisionShape2D" parent="FireBalls"]
 position = Vector2( -1.5874, -157.946 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Fireball2" type="CollisionShape2D" parent="FireBalls"]
 position = Vector2( 180.17, 156.359 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Fireball3" type="CollisionShape2D" parent="FireBalls"]
 position = Vector2( -184.138, 154.772 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2( 3.84463, 21.6825 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 7.58333, -20.164 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -26.6243, 0.394454 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
 health = 200
@@ -82,13 +82,13 @@ script = ExtResource( 6 )
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI/PlayerDetectionZone"]
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="PlayerDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
 position = Vector2( 36.571, 3.90403 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )

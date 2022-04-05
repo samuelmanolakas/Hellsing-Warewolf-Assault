@@ -43,7 +43,6 @@ func wave_check():
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 
-
 	
 	elif Global.wave_num == 2:
 		timer.stop()
