@@ -2,16 +2,16 @@
 
 [ext_resource path="res://Actors/Enemies/Fast_enemy/FastEnemy.gd" type="Script" id=1]
 [ext_resource path="res://Sounds/enemy_attack.wav" type="AudioStream" id=2]
-[ext_resource path="res://NemoW/vampire_enemy.png" type="Texture" id=3]
+[ext_resource path="res://NemoW/6b27ae2684934a553309a8feef01af4c.png" type="Texture" id=3]
 [ext_resource path="res://Global/Health/Health.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Global/Health/Enemy_health.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Actors/Enemies/AI/AI.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 26.9604, 6.06635 )
+extents = Vector2( 23.9689, 6.06635 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 26.2771, 6.16744 )
+extents = Vector2( 19.3683, 6.13546 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 23.1008
@@ -30,23 +30,22 @@ collision_mask = 2
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.054902, 0.419608, 0.00392157, 1 )
-self_modulate = Color( 0.0588235, 0.572549, 0.141176, 1 )
+modulate = Color( 0.658824, 0.937255, 0.45098, 1 )
 position = Vector2( -14.4368, 1.25537 )
-rotation = 1.5708
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( -8.48372, 15.9257 )
+position = Vector2( -9.32462, 19.0791 )
+scale = Vector2( 1, 1.012 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -6.82621, -12.1321 )
+position = Vector2( -7.87733, -17.3877 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -27.4936, 1.04408 )
+position = Vector2( -24.3402, 1.2543 )
 shape = SubResource( 3 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
