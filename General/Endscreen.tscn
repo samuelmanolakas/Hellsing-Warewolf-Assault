@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Graphic/Endscreen.png" type="Texture" id=1]
 [ext_resource path="res://General/Roboto-BoldItalic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Graphic/Testpixel.webp" type="Texture" id=3]
 [ext_resource path="res://Sounds/Endscreen.wav" type="AudioStream" id=4]
+[ext_resource path="res://General/Endscreen.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -19,6 +20,7 @@ size = 40
 font_data = ExtResource( 2 )
 
 [node name="Endscreen" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Ralleboi" type="Sprite" parent="."]
 position = Vector2( 818.681, 432.578 )
@@ -70,16 +72,19 @@ scale = Vector2( 1.23234, 1.0327 )
 texture = ExtResource( 3 )
 
 [node name="Home" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 830.27, 464.524 )
 stream = ExtResource( 4 )
 autoplay = true
 
 [node name="Button" type="Button" parent="Home"]
-margin_left = 1284.0
-margin_top = 816.0
-margin_right = 1600.0
-margin_bottom = 896.0
+margin_left = 291.222
+margin_top = 213.545
+margin_right = 607.222
+margin_bottom = 293.545
 custom_fonts/font = SubResource( 3 )
 text = "Return to menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="Home/Button" to="." method="_on_Button_pressed"]

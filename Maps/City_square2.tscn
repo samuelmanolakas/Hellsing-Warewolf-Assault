@@ -1,12 +1,14 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Actors/Enemies/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Actors/Enemies/Boss/Enemy_Boss.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Global/BulletManager.gd" type="Script" id=3]
 [ext_resource path="res://Global/Test_map.gd" type="Script" id=4]
 [ext_resource path="res://Global/GUI/PauseMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Global/Bullet/Bullet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Graphic/Test_tiles/galletcity-big.png" type="Texture" id=7]
 [ext_resource path="res://Global/SpawnLocation.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Actors/Players/Player.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 288, 192, 0, 192, 0, 32, 288, 32 )
@@ -1066,10 +1068,6 @@ autostart = true
 wait_time = 9.22337e+18
 autostart = true
 
-[node name="BossTimer" type="Timer" parent="."]
-wait_time = 1.896
-one_shot = true
-
 [node name="Position2D" type="Position2D" parent="." groups=[
 "spawn",
 ]]
@@ -1110,7 +1108,12 @@ z_index = 1
 position = Vector2( -1.75317, 0 )
 navpoly = SubResource( 35 )
 
+[node name="Enemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1165.63, 1415.97 )
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1127.31, 387.464 )
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 [connection signal="timeout" from="FastSpawnTimer" to="." method="_on_FastSpawnTimer_timeout"]
 [connection signal="timeout" from="BigSpawnTimer" to="." method="_on_BigSpawnTimer_timeout"]
-[connection signal="timeout" from="BossTimer" to="." method="_on_BossTimer_timeout"]

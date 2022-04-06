@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+export (PackedScene) var Bullet 
+
 var run_speed = 140.0
 var velocity = Vector2.ZERO
 var path = []
@@ -8,6 +10,9 @@ onready var navigation = get_node("../Navigation2D")
 onready var health_stat = $Enemy_health
 onready var ai = $AI
 onready var player = get_node("../Player")
+onready var fireballs = get_node("FireBalls")
+onready var gun_direction = $GunDirection
+onready var end_of_gun = $EndOfGun
 
 func _ready():
 	ai.initialize(self)
@@ -20,6 +25,7 @@ func _physics_process(delta):
 	#velocity = global_position.direction_to(player.global_position) * run_speed
 	velocity = move_and_slide(velocity)
 	#_on_PlayerDetector_body_entered(player)
+	fireballs.rotate(0.03)
 
 func _process(delta):
 	var walk_distance = run_speed * delta
@@ -30,7 +36,7 @@ func handle_hit():
 	health_stat.health -= 20
 	if health_stat.health <= 0:
 		Global.score += 1
-		queue_free()
+		get_tree().change_scene("res://General/Endscreen.tscn")
 		Global._wave_counter()
 
 
@@ -73,3 +79,26 @@ func _update_navigation_path(start_position, end_position):
 	# We don't need it in this example as it corresponds to the character's position.
 	path.remove(0)
 	set_process(true)
+
+
+func _on_FireBalls_body_entered(body):
+	if body.name == "Player":
+		#$AudioStreamPlayer.play() maybe add fire soud :) 
+		body.get_node("Health").health -= 5
+	pass # Replace with function body.
+
+func shoot():
+
+	var bullet_instance = Bullet.instance()
+	var direction = (gun_direction.global_position - end_of_gun.global_position).normalized()
+	bullet_instance.global_position = end_of_gun.global_position
+	bullet_instance.direction = direction
+	get_parent().add_child(bullet_instance)
+	#emit_signal("player_fired_bullet", bullet_instance, end_of_gun.global_position, direction)
+	#$AudioStreamPlayer.play()
+	#attack_cooldown.start()
+
+
+func _on_FireTimer_timeout():
+	shoot()
+	pass # Replace with function body.
