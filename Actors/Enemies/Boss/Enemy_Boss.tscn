@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Actors/Enemies/Boss/Enemy_Boss.gd" type="Script" id=1]
 [ext_resource path="res://Sounds/enemy_attack.wav" type="AudioStream" id=2]
-[ext_resource path="res://NemoW/vampire_enemy.png" type="Texture" id=3]
+[ext_resource path="res://Graphic/old_sprites.png" type="Texture" id=3]
 [ext_resource path="res://Global/Health/Health.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Global/Health/Enemy_health.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Actors/Enemies/AI/AI.gd" type="Script" id=6]
@@ -13,19 +13,19 @@
 radius = 24.0469
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 43.0712, 8.53722 )
+extents = Vector2( 41.2403, 16.9265 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 44.1001, 7.99929 )
+extents = Vector2( 40.8652, 20.068 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 35.2418
+radius = 47.3267
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 22272.1
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 14.8056, 32.9308 )
+extents = Vector2( 15.2411, 68.9425 )
 
 [node name="Enemy" type="KinematicBody2D" groups=[
 "enemy",
@@ -36,11 +36,14 @@ script = ExtResource( 1 )
 Bullet = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
-rotation = 1.5708
+rotation = -1.57079
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 220, 170, 270, 200 )
 
 [node name="FireBalls" type="Area2D" parent="."]
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Fireballs" type="Sprite" parent="FireBalls"]
 z_index = 1
@@ -59,15 +62,15 @@ position = Vector2( -184.138, 154.772 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( 3.84463, 21.6825 )
+position = Vector2( 10.1514, 54.8979 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( 7.58333, -20.164 )
+position = Vector2( 6.74242, -50.8567 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -26.6243, 0.394454 )
+position = Vector2( -15.2722, 2.91714 )
 shape = SubResource( 4 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
@@ -87,7 +90,7 @@ shape = SubResource( 5 )
 [node name="PlayerDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
-position = Vector2( 36.571, 3.90403 )
+position = Vector2( 40.775, 0 )
 shape = SubResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
