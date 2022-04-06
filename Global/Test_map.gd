@@ -40,12 +40,11 @@ func _process(delta):
 func wave_check():
 	if Global.wave_num == 1:
 		timer.stop()
-		boss_timer.stop()
 		print("stop")
 		timer.set_wait_time(5)
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
-		boss_timer.start()
+
 
 	
 	elif Global.wave_num == 2:
@@ -151,21 +150,10 @@ func wave_check():
 		timer.stop()
 		big_timer.stop()
 		fast_timer.stop()
+		boss_timer.stop()
+		boss_timer.start()
 		print("stop")
-		timer.set_wait_time(4)
-		fast_timer.set_wait_time(3)
-		big_timer.set_wait_time(7)
 		$Player/GUI/Control2/Next_wave_text.visible = true
-		timer.start()
-		big_timer.start()
-		fast_timer.start()
-
-	elif Global.wave_num == 12:
-		timer.stop()
-		big_timer.stop()
-		fast_timer.stop()
-
-
 
 
 func _on_SpawnTimer_timeout():
