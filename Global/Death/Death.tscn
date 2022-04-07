@@ -18,21 +18,21 @@ font_data = ExtResource( 5 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 768.911, 433.955 )
-scale = Vector2( 2.67576, 2.47219 )
+position = Vector2( 962.939, 537.401 )
+scale = Vector2( 3.35064, 3.13455 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 779.413, 439.71 )
+position = Vector2( 991.08, 583.341 )
 stream = ExtResource( 3 )
 autoplay = true
 
 [node name="Restartbutton" type="Button" parent="."]
-margin_left = 389.0
-margin_top = 689.0
-margin_right = 673.0
-margin_bottom = 778.0
+margin_left = 585.548
+margin_top = 890.0
+margin_right = 869.548
+margin_bottom = 979.0
 custom_fonts/font = SubResource( 1 )
 text = "RESTART"
 __meta__ = {
@@ -40,10 +40,10 @@ __meta__ = {
 }
 
 [node name="ReturnButton" type="Button" parent="."]
-margin_left = 866.045
-margin_top = 689.0
-margin_right = 1150.04
-margin_bottom = 778.0
+margin_left = 1140.71
+margin_top = 890.0
+margin_right = 1424.7
+margin_bottom = 979.0
 custom_fonts/font = SubResource( 2 )
 text = "RETURN TO MENU"
 __meta__ = {

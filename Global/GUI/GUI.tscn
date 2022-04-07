@@ -53,10 +53,10 @@ __meta__ = {
 }
 
 [node name="Score" type="Label" parent="Control"]
-margin_left = 120.4
-margin_top = -0.00112915
-margin_right = 142.4
-margin_bottom = 47.9989
+margin_left = 130.0
+margin_top = -0.001
+margin_right = 152.0
+margin_bottom = 47.999
 custom_fonts/font = SubResource( 1 )
 text = "0"
 script = ExtResource( 1 )
@@ -90,31 +90,31 @@ __meta__ = {
 [node name="Rows" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 40.0
 margin_top = 40.0
-margin_right = 1560.0
-margin_bottom = 860.0
+margin_right = 1880.0
+margin_bottom = 1040.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TopRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_right = 1520.0
-margin_bottom = 135.0
+margin_right = 1840.0
+margin_bottom = 165.0
 mouse_filter = 2
 size_flags_vertical = 3
 
 [node name="MiddleRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_top = 139.0
-margin_right = 1520.0
-margin_bottom = 680.0
+margin_top = 169.0
+margin_right = 1840.0
+margin_bottom = 830.0
 mouse_filter = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
 [node name="BottomRow" type="HBoxContainer" parent="MarginContainer/Rows"]
-margin_top = 684.0
-margin_right = 1520.0
-margin_bottom = 820.0
+margin_top = 834.0
+margin_right = 1840.0
+margin_bottom = 1000.0
 mouse_filter = 2
 size_flags_vertical = 3
 
@@ -137,10 +137,10 @@ __meta__ = {
 }
 
 [node name="Wave_counter" type="RichTextLabel" parent="Control2"]
-margin_left = 1364.3
-margin_top = -1.58739
-margin_right = 1494.3
-margin_bottom = 51.4126
+margin_left = 1680.0
+margin_top = 14.0
+margin_right = 1810.0
+margin_bottom = 67.0
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 5 )
 text = "Wave:"
@@ -149,10 +149,10 @@ __meta__ = {
 }
 
 [node name="next_wave" type="Label" parent="Control2"]
-margin_left = 1480.43
-margin_top = -1.71595
-margin_right = 1509.43
-margin_bottom = 46.284
+margin_left = 1803.4
+margin_top = 14.0
+margin_right = 1880.4
+margin_bottom = 62.0
 custom_fonts/font = SubResource( 6 )
 text = "0"
 script = ExtResource( 4 )
@@ -165,10 +165,10 @@ stream = ExtResource( 5 )
 
 [node name="Next_wave_text" type="RichTextLabel" parent="Control2"]
 visible = false
-margin_left = 600.0
-margin_top = 200.0
-margin_right = 963.0
-margin_bottom = 296.0
+margin_left = 805.0
+margin_top = 310.873
+margin_right = 1168.0
+margin_bottom = 406.873
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 7 )
 text = "NEXT WAVE"

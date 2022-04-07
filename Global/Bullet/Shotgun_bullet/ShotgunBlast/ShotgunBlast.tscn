@@ -15,7 +15,13 @@ shape = SubResource( 1 )
 [node name="Top" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, -5 )
 
+[node name="MiddleTop" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -2.5 )
+
 [node name="Middle" parent="." instance=ExtResource( 2 )]
+
+[node name="MiddleBottom" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 2.5 )
 
 [node name="Bottom" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, 5 )

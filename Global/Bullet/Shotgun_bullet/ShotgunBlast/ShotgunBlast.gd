@@ -15,11 +15,17 @@ func _ready():
 
 func _process(delta):
 	var top = get_node("Top")
+	var middle_top = get_node("MiddleTop")
 	var bottom = get_node("Bottom")
+	var middle_bottom = get_node("MiddleBottom")
 	if(top):
 		top.position -= Vector2(0,5)
+	if(middle_top):
+		middle_top.position -= Vector2(0,2.5)
 	if(bottom):
 		bottom.position += Vector2(0,5)
+	if(middle_bottom):
+		middle_bottom.position += Vector2(0,2.5)
 
 
 func _physics_process(delta: float) -> void:

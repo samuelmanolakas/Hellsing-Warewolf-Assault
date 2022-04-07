@@ -88,7 +88,7 @@ func wave_check():
 		print("stop")
 		timer.set_wait_time(7)
 		fast_timer.set_wait_time(4)
-		big_timer.set_wait_time(9)
+		big_timer.set_wait_time(10)
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
@@ -101,7 +101,7 @@ func wave_check():
 		print("stop")
 		timer.set_wait_time(7)
 		fast_timer.set_wait_time(4)
-		big_timer.set_wait_time(8)
+		big_timer.set_wait_time(10)
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
@@ -114,7 +114,7 @@ func wave_check():
 		print("stop")
 		timer.set_wait_time(5)
 		fast_timer.set_wait_time(4)
-		big_timer.set_wait_time(7)
+		big_timer.set_wait_time(10)
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
@@ -127,7 +127,7 @@ func wave_check():
 		print("stop")
 		timer.set_wait_time(3)
 		fast_timer.set_wait_time(4)
-		big_timer.set_wait_time(6)
+		big_timer.set_wait_time(10)
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()
@@ -140,7 +140,7 @@ func wave_check():
 		print("stop")
 		timer.set_wait_time(3)
 		fast_timer.set_wait_time(3)
-		big_timer.set_wait_time(5)
+		big_timer.set_wait_time(9)
 		$Player/GUI/Control2/Next_wave_text.visible = true
 		timer.start()
 		big_timer.start()

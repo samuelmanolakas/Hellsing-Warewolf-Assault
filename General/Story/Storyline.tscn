@@ -19,13 +19,13 @@ font_data = ExtResource( 3 )
 script = ExtResource( 6 )
 
 [node name="Rasmus Andersson" type="Sprite" parent="."]
-position = Vector2( 350.435, 601.129 )
+position = Vector2( 466.977, 779.51 )
 scale = Vector2( 0.313548, 0.196195 )
 texture = ExtResource( 1 )
 
 [node name="Bubble_text" type="Sprite" parent="."]
-position = Vector2( 1045.23, 337.558 )
-scale = Vector2( 1.63647, 1.05861 )
+position = Vector2( 1149.78, 414.053 )
+scale = Vector2( 1.78215, 1.12469 )
 texture = ExtResource( 2 )
 
 [node name="Control" type="Control" parent="Bubble_text"]
@@ -38,10 +38,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Bubble_text/Control"]
-margin_left = 368.778
-margin_top = 70.8859
-margin_right = 910.778
-margin_bottom = 424.886
+margin_left = 375.623
+margin_top = 66.7865
+margin_right = 917.623
+margin_bottom = 420.787
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "OH NO, ITS A ZOMBIE APOKALYPS. THANK GOD YOU HAVE YOUR NANOSKELLETON X3000 2020 EDITION PRO MAX ULTRA ZOMBIEKILLERXX IN YOUR POCKET"
@@ -52,8 +52,8 @@ __meta__ = {
 
 [node name="Pixel_park" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 801.169, 445.79 )
-scale = Vector2( 1.23081, 1.02284 )
+position = Vector2( 961.217, 543.022 )
+scale = Vector2( 1.50417, 1.27067 )
 texture = ExtResource( 4 )
 
 [node name="Rasmus_story" type="AudioStreamPlayer2D" parent="."]
@@ -62,10 +62,10 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1403.0
-margin_top = 809.0
-margin_right = 1595.0
-margin_bottom = 888.0
+margin_left = 1584.0
+margin_top = 930.0
+margin_right = 1864.0
+margin_bottom = 1040.0
 custom_fonts/font = SubResource( 2 )
 text = "NEXT"
 __meta__ = {

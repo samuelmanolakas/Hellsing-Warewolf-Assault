@@ -13,19 +13,19 @@
 radius = 24.0469
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 41.2403, 16.9265 )
+extents = Vector2( 43.0712, 8.53722 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 40.8652, 20.068 )
+extents = Vector2( 44.1001, 7.99929 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 47.3267
+radius = 35.2418
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 22272.1
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 15.2411, 68.9425 )
+extents = Vector2( 14.8056, 32.9308 )
 
 [node name="Enemy" type="KinematicBody2D" groups=[
 "enemy",
