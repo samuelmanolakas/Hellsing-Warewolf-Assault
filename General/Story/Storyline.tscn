@@ -62,10 +62,10 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1584.0
-margin_top = 930.0
-margin_right = 1864.0
-margin_bottom = 1040.0
+margin_left = 164.13
+margin_top = 186.124
+margin_right = 444.13
+margin_bottom = 296.124
 custom_fonts/font = SubResource( 2 )
 text = "NEXT"
 __meta__ = {
