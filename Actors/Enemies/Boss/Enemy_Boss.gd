@@ -33,7 +33,7 @@ func _process(delta):
 	_update_navigation_path(position, player.get_global_position())
 
 func handle_hit():
-	health_stat.health -= 5
+	health_stat.health -= 2.5
 	if health_stat.health <= 0:
 		Global.score += 1
 		get_tree().change_scene("res://General/Endscreen.tscn")
