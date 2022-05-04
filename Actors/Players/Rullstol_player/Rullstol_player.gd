@@ -6,7 +6,7 @@ signal player_fired_bullet(bullet, position, direction)
 
 
 export (PackedScene) var Bullet
-export (int) var speed = 200
+export (int) var speed = 500
 
 
 onready var end_of_gun = $EndOfGun
