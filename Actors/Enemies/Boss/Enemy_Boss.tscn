@@ -13,13 +13,13 @@
 radius = 24.0469
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 43.0712, 8.53722 )
+extents = Vector2( 46.7336, 16.7295 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 44.1001, 7.99929 )
+extents = Vector2( 44.9513, 16.6888 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 35.2418
+radius = 39.6085
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 22272.1
@@ -62,7 +62,7 @@ position = Vector2( -184.138, 154.772 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( 10.1514, 54.8979 )
+position = Vector2( 10.1514, 53.954 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
@@ -70,7 +70,7 @@ position = Vector2( 6.74242, -50.8567 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -15.2722, 2.91714 )
+position = Vector2( -21.4074, 2.91714 )
 shape = SubResource( 4 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
